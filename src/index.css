@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #90e0ef;
+}
+*{
+  margin: 0%;
+  padding: 0px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.heading{
+  color: #fb8500;
+  background: lightyellow;
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+.searchForm{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+  align-content: center;
+}
+.ingridientInput{
+  padding: 0.5rem 1rem;
+  min-width: 200px;
+  max-width: 100vh;
+  font-size: 15px;
+  background: #f6e0aa;
+  outline: none;
+  color: darkslategrey;
+  border: none;
+  box-shadow: 0px 0px 5px white;
+  font-size: 1.2rem;
+}
+.submit-btn{
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  margin: 10px 10px 10px 60px;
+  background: #ffb703;
+  border: 2px solid lightyellow;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.submit-btn:hover{
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  margin: 10px 10px 10px 60px;
+  background: white;
+  border: 2px solid lightyellow;
+  border-radius: 4px;
+  color: #ffb703;
+  cursor: pointer;
+  font-weight: bold;
+}
+.app_recipes{
+  /* margin-top: 24px;
+  margin-left: 24px; */
+  /* margin: 24px; */
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: baseline;
+  background: #caf0f8;
+  color: #f78809;
+}
+.Sub-heading{
+  color: #eff8b9;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(#fc9e32,#f8c647);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+.recipeTile_img{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.recipeTile {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
+  margin: 0;
+  text-align: center;
+}
+.recipeTile_name{
+  max-width: 200px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px 0px;
+  text-decoration: underline rgb(255, 204, 0);
+  font-weight: bold;
+}
