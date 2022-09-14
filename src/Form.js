@@ -8,35 +8,32 @@ function Form() {
     const [recipes,setRecipes] = useState([])
     var url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`;
     
-    async function getRecipes(){
-    var result = await axios.get(url);
-    if(result.data.meals==='null'){
-      setRecipes("No recipe found ")
-      console.log("No recipe found ")
-    } else{
-      setRecipes(result.data.meals)
-    }
-    // setRecipes(result.data.meals)
-    console.log(result.data)
-  }
-  // function getRecipes(){
-  //   axios.get(url)
-  //   .then(response => {
-  //       console.log(response)
-  //       // if(response.data.meals === 'null'){
-  //       //   console.log("error")
-  //       // }
-  //       setRecipes(response.data.meals)
-  //       if (recipes === true) {
-  //         isFound = false;
-  //       }
-  //   })
-  //   .catch(error =>{
-  //       console.log(error)
-  //       setRecipes('Error retreiving data')
-  //   })
-
+  //   async function getRecipes(){
+  //   var result = await axios.get(url);
+  //   if(result.data.meals==='null'){
+  //     setRecipes("No recipe found ")
+  //     console.log("No recipe found ")
+  //   } else{
+  //     setRecipes(result.data.meals)
+  //   }
+  //   // setRecipes(result.data.meals)
+  //   console.log(result.data)
   // }
+  function getRecipes(){
+    axios.get(url)
+    .then(response => {
+        console.log(response)
+        // if(response.data.meals === 'null'){
+        //   console.log("error")
+        // }
+        setRecipes(response.data.meals)
+    })
+    .catch(error =>{
+        console.log(error)
+        setRecipes('Error retreiving data')
+    })
+
+  }
   const onSubmit = (e) =>{
     e.preventDefault();
     getRecipes();
